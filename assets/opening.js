@@ -74,6 +74,8 @@
   };
 
   launch.hidden = false;
+  const wrap = document.querySelector('[data-hero-video]');
+  if (wrap) wrap.hidden = false;
   launch.addEventListener('click', () => open(true));
   dialog.querySelector('[data-opening-close]').addEventListener('click', close);
   dialog.addEventListener('cancel', (e) => { e.preventDefault(); close(); });
